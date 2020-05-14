@@ -1,0 +1,1 @@
+``````docker run --name greenhouse-mysql -e MYSQL_ROOT_PASSWORD=toor -e MYSQL_DATABASE=smart-greenhouse --restart=always -p 3306:3306 -d mysql:8
