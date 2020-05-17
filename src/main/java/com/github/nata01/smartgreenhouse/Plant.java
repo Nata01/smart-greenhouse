@@ -6,6 +6,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.Instant;
+import java.util.HashSet;
 import java.util.Set;
 
 @Getter
@@ -20,10 +21,15 @@ public class Plant {
     @ManyToOne(optional = false)
     private PlantType type;
 
+    private String sort;
+
     private Instant createdAt;
 
     private Instant dateOfBirth;
 
     @ManyToMany
-    private Set<PlantEvent> events;
+    private Set<PlantEvent> events = new HashSet<>();
+
+//    @ManyToOne(optional = false)
+//    private Soil soil;
 }

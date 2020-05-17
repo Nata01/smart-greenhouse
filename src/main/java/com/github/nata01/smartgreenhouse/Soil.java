@@ -4,19 +4,19 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Getter
 @Setter
-public class PlantType {
+public class Soil {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
 
-    @Column(nullable = false)
-    private String title;
+    private String composition;
 
-    @ManyToOne(optional = false)
-    private Family family;
+//    @OneToMany(mappedBy = "soil")
+//    private Set<Plant> plants;
 }
