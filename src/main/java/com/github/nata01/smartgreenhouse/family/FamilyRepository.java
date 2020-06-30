@@ -1,4 +1,4 @@
-package com.github.nata01.smartgreenhouse;
+package com.github.nata01.smartgreenhouse.family;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

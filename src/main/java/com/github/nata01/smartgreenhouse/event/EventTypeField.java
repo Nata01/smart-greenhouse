@@ -1,20 +1,19 @@
-package com.github.nata01.smartgreenhouse;
+package com.github.nata01.smartgreenhouse.event;
 
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.Set;
 
 @Entity
 @Getter
 @Setter
-public class EventType {
+public class EventTypeField {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToMany(mappedBy = "eventType")
-    private Set<EventTypeField> fields;
+    @ManyToOne
+    private EventType eventType;
 }

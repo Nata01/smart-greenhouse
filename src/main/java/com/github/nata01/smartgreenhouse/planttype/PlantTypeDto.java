@@ -1,5 +1,6 @@
-package com.github.nata01.smartgreenhouse;
+package com.github.nata01.smartgreenhouse.planttype;
 
+import com.github.nata01.smartgreenhouse.family.FamilyDto;
 import lombok.Getter;
 
 @Getter
@@ -9,7 +10,7 @@ public class PlantTypeDto {
     private final FamilyDto family;
     private final String title;
 
-    PlantTypeDto(PlantType plantType) {
+    public PlantTypeDto(PlantType plantType) {
         this.id = plantType.getId();
         this.family = new FamilyDto(plantType.getFamily());
         this.title = plantType.getTitle();

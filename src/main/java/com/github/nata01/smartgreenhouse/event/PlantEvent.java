@@ -1,5 +1,6 @@
-package com.github.nata01.smartgreenhouse;
+package com.github.nata01.smartgreenhouse.event;
 
+import com.github.nata01.smartgreenhouse.plant.Plant;
 import lombok.Getter;
 import lombok.Setter;
 

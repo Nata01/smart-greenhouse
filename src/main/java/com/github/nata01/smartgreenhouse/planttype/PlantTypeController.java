@@ -1,5 +1,6 @@
-package com.github.nata01.smartgreenhouse;
+package com.github.nata01.smartgreenhouse.planttype;
 
+import com.github.nata01.smartgreenhouse.family.FamilyRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

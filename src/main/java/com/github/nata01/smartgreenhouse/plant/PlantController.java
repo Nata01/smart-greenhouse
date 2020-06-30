@@ -1,5 +1,6 @@
-package com.github.nata01.smartgreenhouse;
+package com.github.nata01.smartgreenhouse.plant;
 
+import com.github.nata01.smartgreenhouse.sort.SortRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,7 +14,7 @@ import java.util.stream.Collectors;
 public class PlantController {
 
     private PlantRepository plantRepository;
-    private PlantTypeRepository plantTypeRepository;
+    private SortRepository sortRepository;
 
     @GetMapping
     public List<PlantDto> getAll() {
@@ -23,8 +24,8 @@ public class PlantController {
     @PostMapping
     public PlantDto create(@RequestBody CreatePlantCommand plantCommand) {
         Plant plant = new Plant();
-        plant.setSort(plantCommand.getSort());
-        plant.setType(plantTypeRepository.getOne(plantCommand.getPlantTypeId()));
+        plant.setLabel(plantCommand.getLabel());
+        plant.setSort(sortRepository.getOne(plantCommand.getSortId()));
         plant.setCreatedAt(Instant.now());
         plant.setDateOfBirth(plantCommand.getDateOfBirth());
 

@@ -1,4 +1,4 @@
-package com.github.nata01.smartgreenhouse;
+package com.github.nata01.smartgreenhouse.plant;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -9,7 +9,7 @@ import java.time.Instant;
 @Setter
 public class CreatePlantCommand {
 
-    private long plantTypeId;
-    private String sort;
+    private String label;
+    private long sortId;
     private Instant dateOfBirth;
 }

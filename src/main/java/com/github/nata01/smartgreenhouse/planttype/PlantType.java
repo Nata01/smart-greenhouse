@@ -1,5 +1,6 @@
-package com.github.nata01.smartgreenhouse;
+package com.github.nata01.smartgreenhouse.planttype;
 
+import com.github.nata01.smartgreenhouse.family.Family;
 import lombok.Getter;
 import lombok.Setter;
 

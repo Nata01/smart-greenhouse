@@ -1,6 +1,8 @@
-package com.github.nata01.smartgreenhouse;
+package com.github.nata01.smartgreenhouse.plant;
 
 
+import com.github.nata01.smartgreenhouse.event.PlantEvent;
+import com.github.nata01.smartgreenhouse.sort.Sort;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,10 +20,10 @@ public class Plant {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(optional = false)
-    private PlantType type;
+    private String label;
 
-    private String sort;
+    @ManyToOne(optional = false)
+    private Sort sort;
 
     private Instant createdAt;
 
